@@ -1,0 +1,38 @@
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+<p style="padding-top:20px;"></p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="panel panel-default">
+                <table class="table table-striped">
+                    <thead>
+                        <tr class="info">
+                            <td>Title</td>
+                            <td>Industry</td>
+                            <td>Company size</td>
+                            <td>Address</td>
+                            <td>Vacancies count</td>
+                            <td>Site URL</td>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for company in companies %}
+                    <tr>
+                        <td>{{company.title}}</td>
+                        <td>{{company.industry}}</td>
+                        <td>{{company.company_size}}</td>
+                        <td>{{company.address}}</td>
+                        <td>{{company.vacancies_count}}</td>
+                        <td>{{company.site_url}}</td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
